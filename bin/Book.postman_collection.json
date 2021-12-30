@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "4ebb9685-85f0-4918-af48-27b632e25932",
+		"name": "Book",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addBook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"isbn\":\"C002\",\n    \"title\":\"Title2\",\n    \"authors\": [\n                {\n                \"name\":\"Name2\",\n                \"birthDate\":\"1999-12-12\"\n                },\n                {\n                    \"name\":\"Name3\",\n                    \"birthDate\":\"2000-12-12\"\n                }   \n            ],\n    \"publisher\":\"Publisher1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/book",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"book"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "addBook",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"isbn\":\"C002\",\n    \"title\":\"Title2\",\n    \"authors\": [\n                {\n                \"name\":\"Name2\",\n                \"birthDate\":\"1999-12-12\"\n                },\n                {\n                    \"name\":\"Name3\",\n                    \"birthDate\":\"2000-12-12\"\n                }   \n            ],\n    \"publisher\":\"Publisher1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/book",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"book"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 29 Dec 2021 17:23:27 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "true"
+				}
+			]
+		},
+		{
+			"name": "findBookByIsbn",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/book/B001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"book",
+						"B001"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "findBookByIsbn",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/book/B001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"book",
+								"B001"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 29 Dec 2021 17:33:37 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"isbn\": \"B001\",\n    \"title\": \"Title1\",\n    \"authors\": [\n        {\n            \"name\": \"Name1\",\n            \"birthDate\": \"1990-12-12\"\n        }\n    ],\n    \"publisher\": \"Publisher1\"\n}"
+				}
+			]
+		}
+	]
+}
